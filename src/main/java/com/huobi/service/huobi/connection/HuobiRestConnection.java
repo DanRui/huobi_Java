@@ -67,6 +67,7 @@ public class HuobiRestConnection {
     new ApiSignature().createSignature(options.getApiKey(), options.getSecretKey(), "GET", host, path, paramsBuilder);
     requestUrl += paramsBuilder.buildUrl();
 
+    System.out.println(requestUrl);
     Request executeRequest = new Request.Builder().url(requestUrl)
         .addHeader("Content-Type", "application/x-www-form-urlencoded").build();
 
